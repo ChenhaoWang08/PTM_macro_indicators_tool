@@ -1,0 +1,32 @@
+[project]
+name = "macro-radar"
+version = "0.1.0"
+description = "Local-first macroeconomic research dashboard MVP"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas",
+    "duckdb",
+    "streamlit",
+    "plotly",
+    "pyyaml",
+    "pytest",
+]
+
+[project.scripts]
+macro-radar-refresh-fred = "macro_radar.commands.refresh_fred_snapshots:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["macro_radar*"]
+exclude = ["data*", "tests*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100

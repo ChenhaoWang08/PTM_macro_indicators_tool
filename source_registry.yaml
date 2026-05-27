@@ -1,0 +1,277 @@
+m2:
+  name: M2 Money Supply
+  source_type: official_snapshot_csv
+  snapshot_path: data/official/m2.csv
+  adapter_source_type: fred_api
+  api_endpoint: https://api.stlouisfed.org/fred/series/observations
+  source_name: Federal Reserve Board via FRED
+  source_url: https://fred.stlouisfed.org/series/M2SL
+  download_url: https://fred.stlouisfed.org/graph/fredgraph.csv?id=M2SL&cosd=2023-12-01&coed=2024-12-01
+  series_id: M2SL
+  frequency: monthly
+  unit: billions_usd_seasonally_adjusted
+  status: implemented
+  provenance_status: verified_official_snapshot
+  observation_start: 2023-12-01
+  observation_end: 2024-12-01
+  retrieved_at: 2026-05-26
+  rights_note: FRED public data; cite the original FRED series and source.
+
+ism_manufacturing:
+  name: ISM Manufacturing PMI
+  source_type: official_release_snapshot_csv
+  snapshot_path: data/official/ism_manufacturing.csv
+  source_name: Institute for Supply Management via PRNewswire release
+  source_url: https://www.prnewswire.com/news-releases/manufacturing-pmi-at-49-3-december-2024-manufacturing-ism-report-on-business-302341381.html
+  download_url: null
+  series_id: null
+  frequency: monthly
+  unit: diffusion_index
+  status: implemented
+  provenance_status: verified_official_release_snapshot
+  observation_start: 2024-01-01
+  observation_end: 2024-12-01
+  retrieved_at: 2026-05-26
+  rights_note: Manual snapshot from ISM release text; do not automate scraping without review.
+
+ism_services:
+  name: ISM Services PMI
+  source_type: official_release_snapshot_csv
+  snapshot_path: data/official/ism_services.csv
+  source_name: Institute for Supply Management via PRNewswire release
+  source_url: https://www.prnewswire.com/news-releases/services-pmi-at-54-1-december-2024-services-ism-report-on-business-302343431.html
+  download_url: null
+  series_id: null
+  frequency: monthly
+  unit: diffusion_index
+  status: implemented
+  provenance_status: verified_official_release_snapshot
+  observation_start: 2024-01-01
+  observation_end: 2024-12-01
+  retrieved_at: 2026-05-26
+  rights_note: Manual snapshot from ISM release text; do not automate scraping without review.
+
+umcsi:
+  name: University of Michigan Consumer Sentiment
+  source_type: official_snapshot_csv
+  snapshot_path: data/official/umcsi.csv
+  source_name: University of Michigan via FRED
+  source_url: https://fred.stlouisfed.org/series/UMCSENT
+  download_url: https://fred.stlouisfed.org/graph/fredgraph.csv?id=UMCSENT&cosd=2024-01-01&coed=2024-12-01
+  series_id: UMCSENT
+  frequency: monthly
+  unit: index_1966_q1_100_not_seasonally_adjusted
+  status: implemented
+  provenance_status: verified_official_snapshot
+  observation_start: 2024-01-01
+  observation_end: 2024-12-01
+  retrieved_at: 2026-05-26
+  rights_note: FRED-hosted copyrighted series; cite University of Michigan/FRED.
+
+building_permits:
+  name: Building Permits
+  source_type: official_snapshot_csv
+  snapshot_path: data/official/building_permits.csv
+  source_name: U.S. Census Bureau and HUD via FRED
+  source_url: https://fred.stlouisfed.org/series/PERMIT
+  download_url: https://fred.stlouisfed.org/graph/fredgraph.csv?id=PERMIT&cosd=2024-01-01&coed=2024-12-01
+  series_id: PERMIT
+  frequency: monthly
+  unit: thousands_saar
+  status: implemented
+  provenance_status: verified_official_snapshot
+  observation_start: 2024-01-01
+  observation_end: 2024-12-01
+  retrieved_at: 2026-05-26
+  rights_note: FRED public data; cite Census/HUD/FRED.
+
+real_rates:
+  name: 10-Year Real Interest Rate
+  source_type: official_snapshot_csv
+  snapshot_path: data/official/real_rates.csv
+  adapter_source_type: fred_api
+  adapter_status: ready
+  api_endpoint: https://api.stlouisfed.org/fred/series/observations
+  source_name: Board of Governors of the Federal Reserve System via FRED
+  source_url: https://fred.stlouisfed.org/series/DFII10
+  download_url: https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2024-01-01
+  series_id: DFII10
+  frequency: daily
+  unit: percent
+  status: implemented
+  provenance_status: verified_official_snapshot
+  observation_start: 2024-01-02
+  observation_end: 2026-05-21
+  retrieved_at: 2026-05-27
+  rights_note: FRED public data from H.15 Selected Interest Rates; requires FRED_API_KEY for live fetch.
+
+yield_curve:
+  name: 10Y-2Y Yield Curve Spread
+  source_type: official_snapshot_csv
+  snapshot_path: data/official/yield_curve.csv
+  adapter_source_type: fred_api
+  adapter_status: ready
+  api_endpoint: https://api.stlouisfed.org/fred/series/observations
+  source_name: Federal Reserve Bank of St. Louis via FRED
+  source_url: https://fred.stlouisfed.org/series/T10Y2Y
+  download_url: https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10Y2Y&cosd=2024-01-01
+  series_id: T10Y2Y
+  frequency: daily
+  unit: percent
+  status: implemented
+  provenance_status: verified_official_snapshot
+  observation_start: 2024-01-02
+  observation_end: 2026-05-22
+  retrieved_at: 2026-05-27
+  rights_note: FRED-calculated spread using Treasury data; requires FRED_API_KEY for live fetch.
+
+credit_spreads:
+  name: Credit Spreads
+  source_type: official_snapshot_csv
+  snapshot_path: data/official/credit_spreads_hy.csv
+  adapter_source_type: fred_api
+  adapter_status: ready
+  api_endpoint: https://api.stlouisfed.org/fred/series/observations
+  source_name: Ice Data Indices, LLC via FRED
+  source_url: https://fred.stlouisfed.org/series/BAMLH0A0HYM2
+  download_url: https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLH0A0HYM2&cosd=2024-01-01
+  series_id: BAMLH0A0HYM2
+  additional_series:
+    investment_grade_oas:
+      name: ICE BofA US Corporate Index Option-Adjusted Spread
+      series_id: BAMLC0A0CM
+      source_url: https://fred.stlouisfed.org/series/BAMLC0A0CM
+      download_url: https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLC0A0CM&cosd=2024-01-01
+      snapshot_path: data/official/credit_spreads_ig.csv
+      unit: percent
+    high_yield_oas:
+      name: ICE BofA US High Yield Index Option-Adjusted Spread
+      series_id: BAMLH0A0HYM2
+      source_url: https://fred.stlouisfed.org/series/BAMLH0A0HYM2
+      download_url: https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLH0A0HYM2&cosd=2024-01-01
+      snapshot_path: data/official/credit_spreads_hy.csv
+      unit: percent
+  frequency: daily
+  unit: percent
+  status: implemented
+  provenance_status: verified_official_snapshot
+  observation_start: 2024-01-02
+  observation_end: 2026-05-25
+  retrieved_at: 2026-05-27
+  rights_note: ICE BofA data has copyright restrictions; adapter is available, but publication/distribution needs rights review.
+
+nfib:
+  name: NFIB Small Business Optimism
+  source_type: future
+  fixture_path: null
+  frequency: monthly
+  unit: index_level
+  status: not_implemented
+
+commodities:
+  name: Cyclical Commodities
+  source_type: official_snapshot_csv
+  snapshot_path: data/official/commodity_copper.csv
+  adapter_source_type: world_bank_pink_sheet_xlsx
+  adapter_status: manual_snapshot
+  source_name: World Bank Prospects Group Commodity Markets Pink Sheet
+  source_url: https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/world-bank-commodities-price-data-the-pink-sheet
+  download_url: https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx
+  series_id: COPPER
+  additional_series:
+    copper:
+      name: Copper
+      series_id: COPPER
+      source_url: https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/world-bank-commodities-price-data-the-pink-sheet
+      download_url: https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx
+      snapshot_path: data/official/commodity_copper.csv
+      frequency: monthly
+      unit: usd_per_metric_ton
+      observation_start: 2024-01-01
+      observation_end: 2026-04-01
+      retrieved_at: 2026-05-27
+      rights_note: World Bank Pink Sheet monthly nominal U.S. dollar price snapshot; cite World Bank.
+    iron_ore:
+      name: Iron Ore, CFR Spot
+      series_id: IRON_ORE
+      source_url: https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/world-bank-commodities-price-data-the-pink-sheet
+      download_url: https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx
+      snapshot_path: data/official/commodity_iron_ore.csv
+      frequency: monthly
+      unit: usd_per_dry_metric_ton_unit
+      observation_start: 2024-01-01
+      observation_end: 2026-04-01
+      retrieved_at: 2026-05-27
+      rights_note: World Bank Pink Sheet monthly nominal U.S. dollar price snapshot; cite World Bank.
+    lumber:
+      name: Sawnwood, Malaysian
+      series_id: SAWNWD_MYS
+      source_url: https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/world-bank-commodities-price-data-the-pink-sheet
+      download_url: https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx
+      snapshot_path: data/official/commodity_lumber.csv
+      frequency: monthly
+      unit: usd_per_cubic_meter
+      observation_start: 2024-01-01
+      observation_end: 2026-04-01
+      retrieved_at: 2026-05-27
+      rights_note: World Bank Pink Sheet sawnwood series used as a wood/lumber proxy; cite World Bank.
+    gold:
+      name: Gold
+      series_id: GOLD
+      source_url: https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/world-bank-commodities-price-data-the-pink-sheet
+      download_url: https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx
+      snapshot_path: data/official/commodity_gold.csv
+      frequency: monthly
+      unit: usd_per_troy_ounce
+      observation_start: 2024-01-01
+      observation_end: 2026-04-01
+      retrieved_at: 2026-05-27
+      rights_note: World Bank Pink Sheet monthly nominal U.S. dollar price snapshot; cite World Bank.
+    silver:
+      name: Silver
+      series_id: SILVER
+      source_url: https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/world-bank-commodities-price-data-the-pink-sheet
+      download_url: https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx
+      snapshot_path: data/official/commodity_silver.csv
+      frequency: monthly
+      unit: usd_per_troy_ounce
+      observation_start: 2024-01-01
+      observation_end: 2026-04-01
+      retrieved_at: 2026-05-27
+      rights_note: World Bank Pink Sheet monthly nominal U.S. dollar price snapshot; cite World Bank.
+    wti:
+      name: Crude Oil, WTI
+      series_id: CRUDE_WTI
+      source_url: https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/world-bank-commodities-price-data-the-pink-sheet
+      download_url: https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx
+      snapshot_path: data/official/commodity_wti.csv
+      frequency: monthly
+      unit: usd_per_barrel
+      observation_start: 2024-01-01
+      observation_end: 2026-04-01
+      retrieved_at: 2026-05-27
+      rights_note: World Bank Pink Sheet monthly nominal U.S. dollar price snapshot; cite World Bank.
+  frequency: monthly
+  unit: mixed_nominal_usd
+  status: implemented
+  provenance_status: verified_official_snapshot
+  observation_start: 2024-01-01
+  observation_end: 2026-04-01
+  retrieved_at: 2026-05-27
+  rights_note: World Bank Pink Sheet monthly nominal U.S. dollar price snapshots; lumber uses Sawnwood, Malaysian as a wood/lumber proxy. Not investment advice.
+
+esi:
+  name: European Economic Sentiment Indicator
+  source_type: future
+  fixture_path: null
+  frequency: monthly
+  unit: index_level
+  status: not_implemented
+
+china_pmi:
+  name: China PMI
+  source_type: future
+  fixture_path: null
+  frequency: monthly
+  unit: diffusion_index
+  status: not_implemented
