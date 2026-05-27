@@ -104,7 +104,48 @@ The dashboard shows macro evidence and conservative signal labels. It does not t
 
 Create and activate a virtual environment:
 
+                     .-""""""""""""-.
+                  .-'                '-.
+                .'      SOVIET RADAR    '.
+               /        MACRO RADAR       \
+              /                            \
+             |        .------------.        |
+             |       /  .--------.  \       |
+             |      /  /          \  \      |
+             |     |  |    CCCP    |  |     |
+             |      \  \          /  /      |
+             |       \  '--------'  /       |
+             |        '------------'        |
+              \                            /
+               \                          /
+                '.                      .'
+                  '-.                .-'
+                     '-............-'
+                           ||
+                           ||
+                         __||__
+                        /  ||  \
+                       /   ||   \
+                      /____||____\
+                           ||
+                           ||
+                  _________||_________
+                 /                    \
+                /   SIGNAL SCAN NODE   \
+               /________________________\
+               |  [ ] [ ] [ ] [ ] [ ]  |
+               |  MACRO RISK MONITOR   |
+               |________________________|
+                    /      ||      \
+                   /       ||       \
+                  /________||________\
+
+        >>> SCANNING: LIQUIDITY | CREDIT | GROWTH | SENTIMENT <<<
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -e .
+
+
+
